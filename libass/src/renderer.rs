@@ -44,7 +44,7 @@ impl<'library> Renderer<'library> {
         }
     }
 
-    pub fn render_frame(&mut self, track: Track, now: i64) -> (Option<Image>, Change) {
+    pub fn render_frame(&mut self, track: &mut Track, now: i64) -> (Option<Image>, Change) {
         let mut change = 0;
         let change_ptr: *mut _ = &mut change;
 
